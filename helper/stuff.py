@@ -1,16 +1,4 @@
-#    This file is part of the CompressorBot distribution.
-#    Copyright (c) 2021 Danish_00
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU General Public License as published by
-#    the Free Software Foundation, version 3.
-#
-#    This program is distributed in the hope that it will be useful, but
-#    WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
-#    General Public License for more details.
-#
-#    License can be found in < https://github.com/1Danish-00/CompressorBot/blob/main/License> .
+ .
 
 from .worker import *
 
@@ -33,8 +21,8 @@ async def start(event):
         buttons=[
             [Button.inline("HELP", data="ihelp")],
             [
-                Button.url("SOURCE CODE", url="github.com/1Danish-00/CompressorBot"),
-                Button.url("DEVELOPER", url="t.me/danish_00"),
+                Button.url("SOURCE CODE", url="https://github.com/anuragmaurya2105/CompressorBot"),
+                Button.url("DEVELOPER", url="t.me/boogeyman_anu"),
             ],
         ],
     )
@@ -60,8 +48,8 @@ async def beck(event):
         buttons=[
             [Button.inline("HELP", data="ihelp")],
             [
-                Button.url("SOURCE CODE", url="github.com/1Danish-00/"),
-                Button.url("DEVELOPER", url="t.me/danish_00"),
+                Button.url("SOURCE CODE", url="https://github.com/anuragmaurya2105/CompressorBot"),
+                Button.url("DEVELOPER", url="t.me/boogeyman_anu"),
             ],
         ],
     )
@@ -104,7 +92,7 @@ async def ccom(e):
     async with e.client.conversation(chat) as cv:
         reply = cv.wait_event(events.NewMessage(from_users=chat))
         repl = await reply
-        if "." in repl.text:
+        if "." in repl.text: 
             q = repl.text.split(".")[-1]
             g = repl.text.replace(q, "mkv")
         else:
